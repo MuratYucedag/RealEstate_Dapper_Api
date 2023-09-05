@@ -1,0 +1,18 @@
+﻿@model List<ResultBottomGridDto>
+<section class="w3l-bottom-grids py-5" id="steps">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="grids-area-hny main-cont-wthree-fea row">
+           
+            @foreach(var item in Model){
+            <div class="col-lg-4 col-md-6 grids-feature">
+                <div class="area-box no-box-shadow">
+                    <span class="@item.Icon"></span>
+                    <h4><a href="#feature" class="title-head">@item.Title</a></h4>
+                    <p>@item.Description</p>
+                    <a href="#more" class="more">Daha Fazlası <span class="fa fa-long-arrow-right"></span> </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
