@@ -1,0 +1,57 @@
+﻿@model List<ResultTestimonialDto>
+<section class="w3l-index3" id="about">
+    <div class="midd-w3 py-5">
+        <div class="container pb-lg-5 pb-md-4 pb-2">
+            <div class="row">
+                <div class="col-lg-5 pr-lg-0">
+                    <div class="w3l-left-img1">
+                    </div>
+                </div>
+                <div class="col-lg-7 pl-lg-0">
+                    <div class="w3l-right-info">
+                        <h6 class="title-small">Referanslarımız</h6>
+                        <div class="client-grid">
+                            <div class="client-title">
+                                <h3 class="title-big">Müşteri İlişiklerine Değer Veriyoruz</h3>
+                            </div>
+                            <div class="clients-info">
+                                <h3 class="title-big">123</h3>
+                                <p>Memnun Müşteriler</p>
+                            </div>
+                        </div>
+
+                        <div class="w3l-clients" id="testimonials">
+                            <div id="owl-demo1" class="owl-carousel owl-theme mt-4 pt-2 mb-4">
+                                @foreach(var item in Model)
+                                {
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial">
+                                                <div class="testi-des">
+                                                    <div class="peopl align-self">
+                                                        <h4>@item.NameSurname</h4>
+                                                        <p class="indentity">@item.Title</p>
+                                                    </div>
+                                                </div>
+                                                <blockquote>
+                                                    <q>
+                                                        @item.Comment
+                                                    </q>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </div>
+                        </div>
+
+                        <a href="#agents" class="btn btn-style btn-primary mt-5">Acentamızla İletişime Geçin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
