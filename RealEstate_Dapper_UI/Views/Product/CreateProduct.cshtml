@@ -1,0 +1,43 @@
+﻿@model CreateProductDto
+
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Yeni İlan Ekleme Sayfası</h6>
+                <form method="post">
+                    <label>İlan Başlığı</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>Şehir</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>İlçe</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>Kategori</label>
+                    @Html.DropDownListFor(x=>x.categoryid,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
+                    <br />
+                    <label>Fiyat</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>Tür</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>Kapak Fotoğrafı</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>İlan Açık Adresi</label>
+                    <textarea asp-for="address" class="form-control" rows="5"></textarea>
+                    <br />
+                    <button class="btn btn-primary">İlanı Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
