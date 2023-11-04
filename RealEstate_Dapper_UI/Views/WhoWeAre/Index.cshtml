@@ -1,0 +1,44 @@
+﻿@model List<ResultWhoWeAreDetailDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Biz Kimiz Listesi</h6>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Başlık</th>
+                                <th scope="col">Alt Başlık</th>
+                                <th scope="col">Sil</th>
+                                <th scope="col">Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.Title</td>
+                                    <td>@item.Subtitle</td>
+                                    <td><a href="/WhoWeAre/DeleteWhoWeAreDetail/@item.WhoWeAreDetailID" class="btn btn-outline-danger">Sil</a></td>
+                                    <td><a href="/WhoWeAre/UpdateWhoWeAreDetail/@item.WhoWeAreDetailID" class="btn btn-outline-success">Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/WhoWeAre/CreateWhoWeAreDetail/" class="btn btn-outline-info">Yeni Biz Kimiz Alanı Girişi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
