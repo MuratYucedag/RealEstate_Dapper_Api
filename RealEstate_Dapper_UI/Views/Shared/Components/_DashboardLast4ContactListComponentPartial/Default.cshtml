@@ -1,0 +1,23 @@
+﻿@model List<Last4ContactResultDto>
+
+<div class="col-sm-12 col-md-6 col-xl-4">
+    <div class="h-100 bg-light rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <h6 class="mb-0">Mesajlar</h6>
+            <a href="">Tümünü Gör</a>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="d-flex align-items-center border-bottom py-3">
+                <img class="rounded-circle flex-shrink-0" src="~/dashmin-1.0.0/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                <div class="w-100 ms-3">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-0">@item.Name</h6>
+                        <small>@(((DateTime)item.SendDate).ToString("dd-MMM-yyyy"))</small>
+                    </div>
+                    <span>@item.Message</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
