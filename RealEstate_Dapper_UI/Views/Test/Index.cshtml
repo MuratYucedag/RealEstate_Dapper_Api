@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.SignalR
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+@section Scripts
+    {
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <script type="text/javascript">
+                            $(document).ready(() => {
+                                var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44333/SignalRHub").build();
+                                $("#connstatus").text(connection.state);
+
+                                connection.start().then(() => {
+                                    $("#connstatus").text(connection.state);
+                                    setInterval(() => {
+                                        connection.invoke("SendCategoryCount");
+                                    }, 1000);
+                                    
+                                }).catch((err) => { console.log(err) });
+
+                               
+                                connection.on("ReceiveCategoryCount", (value) => {
+                                    $("#categorycount").text(value);
+                                });
+
+                            });
+
+                           
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-warning">Bağlantı Durumu:<strong id="connstatus"></strong></div>
+    </div>
+
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-primary">Kategori Sayısı:<strong id="categorycount"></strong></div>
+    </div>
+</div>
