@@ -1,0 +1,14 @@
+﻿@model GirisYap
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <input type="text" class="form-control" asp-for="username" placeholder="Kullanıcı adı" />
+    <br />
+    <input type="text" class="form-control" asp-for="password" placeholder="Şifre" />
+    <br />
+    <button class="btn btn-dark">Giriş Yap</button>
+</div>

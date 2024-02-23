@@ -1,6 +1,6 @@
 ﻿namespace RealEstate_Dapper_Api.Tools
 {
-    public class GetChecktAppUserViewModel
+    public class GetCheckAppUserViewModel
     {
         public int Id { get; set; }
         public string Username { get; set; }
