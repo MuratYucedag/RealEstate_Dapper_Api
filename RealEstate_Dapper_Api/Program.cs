@@ -30,7 +30,7 @@ builder.Services.AddTransient<IServiceRepository, ServiceRepository>();
 builder.Services.AddTransient<IBottomGridRepository, BottomGridRepository>();
 builder.Services.AddTransient<IPopularLocationRepository, PopularLocationRepository>();
 builder.Services.AddTransient<IStatisticsRepository, StatisticsRepository>();
-builder.Services.AddTransient<ITestimonialRepository, TestimonialRepository>();
+builder.Services.AddTransient<ITestimonialRepository, TestimonialRepository>();  
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddTransient<IContactRepository, ContactRepository>();
 builder.Services.AddTransient<IToDoListRepository, ToDoListRepository>();
