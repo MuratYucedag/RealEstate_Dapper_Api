@@ -1,4 +1,4 @@
-﻿namespace RealEstate_Dapper_Api.Dtos.MessageDtos
+﻿namespace RealEstate_Dapper_UI.Dtos.MessageDtos
 {
     public class ResultInBoxMessageDto
     {
