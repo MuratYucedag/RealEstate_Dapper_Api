@@ -1,4 +1,4 @@
-﻿namespace RealEstate_Dapper_UI.Dtos.ProductDtos
+﻿namespace RealEstate_Dapper_Api.Dtos.ProductDtos
 {
     public class CreateProductDto
     {
@@ -16,4 +16,5 @@
         public int ProductCategory { get; set; }
         public int EmployeeID { get; set; }
     }
+
 }

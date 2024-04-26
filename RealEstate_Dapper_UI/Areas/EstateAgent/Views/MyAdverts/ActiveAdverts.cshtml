@@ -1,7 +1,7 @@
 ﻿@model List<RealEstate_Dapper_UI.Dtos.ProductDtos.ResultProductAdvertListWithCategoryByEmployeeDto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "ActiveAdverts";
     Layout = "~/Areas/EstateAgent/Views/LayoutEstateAgent/Index.cshtml";
     int count = 0;
 }
@@ -10,7 +10,7 @@
     <div class="row g-4">
         <div class="col-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Yayınladığınız İlan Listesi</h6>
+                <h6 class="mb-4">Akitf İlan Listesi</h6>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -21,6 +21,7 @@
                                 <th scope="col">Fiyat</th>
                                 <th scope="col">Tür</th>
                                 <th scope="col">Sil</th>
+                                <th scope="col">Pasif Yap</th>
                                 <th scope="col">Güncelle</th>
                                 <th scope="col">Sitede Gör</th>
                             </tr>
@@ -36,6 +37,7 @@
                                     <td>@item.price</td>
                                     <td>@item.type</td>
                                     <td><a href="/Product/DeleteProduct/@item.productID" class="btn btn-outline-danger">Sil</a></td>
+                                    <td><a href="/Product/DeleteProduct/@item.productID" class="btn btn-outline-dark">Pasif Yap</a></td>
                                     <td><a href="/Product/UpdateProduct/@item.productID" class="btn btn-outline-success">Güncelle</a></td>
                                     <td><a href="/Product/ProductDetail/@item.productID" class="btn btn-outline-primary">Sitede Gör</a></td>    
                                 </tr>
