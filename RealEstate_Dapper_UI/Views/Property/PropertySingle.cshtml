@@ -25,26 +25,26 @@
         <div class="inner mb-4">
             <ul class="blog-single-author-date align-items-center">
                 <li>
-                    <div class="listing-category"><span>Buy</span><span>Rent</span></div>
+                    <div class="listing-category"><span>@ViewBag.type</span></div>
                 </li>
                 <li><span class="fa fa-clock-o"></span> 5 months ago</li>
                 <li><span class="fa fa-eye"></span> 250 views</li>
             </ul>
         </div>
         <div class="post-content">
-            <h2 class="title-single"> A digital prescription for the pharma industry</h2>
+            <h2 class="title-single"> @ViewBag.title1</h2>
         </div>
         <div class="blo-singl mb-4">
             <ul class="blog-single-author-date align-items-center">
                 <li>
-                    <p>Unnamed road, San Francisco, CA 94102</p>
+                    <p>@ViewBag.address @ViewBag.district / @ViewBag.city</p>
                 </li>
                 <li><span class="fa fa-bed"></span> 3 Beds</li>
-                <li><span class="fa fa-bath"></span> 4 Baths</li>
+                <li><span class="fa fa-bath"></span> @ViewBag.bathCount Banyo</li>
                 <li><span class="fa fa-share-square-o"></span> 1258 sqrft</li>
             </ul>
             <ul class="share-post">
-                <a href="#url" class="cost-estate m-o">$25,0045</a>
+                <a href="#url" class="cost-estate m-o">₺ @ViewBag.price</a>
             </ul>
         </div>
         <div class="row">
