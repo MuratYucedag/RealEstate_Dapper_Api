@@ -49,7 +49,18 @@ namespace RealEstate_Dapper_UI.Controllers
             ViewBag.type = values.type;
 
             ViewBag.bathCount = values2.bathCount;
-            //ViewBag.datediff=values.adv
+            ViewBag.bedCount = values2.bedRoomCount;
+            ViewBag.size = values2.productSize;
+
+            DateTime date1 = DateTime.Now;
+            DateTime date2 = values.AdvertisementDate;
+
+            TimeSpan timeSpan = date1 - date2;
+            int month = timeSpan.Days;
+
+            ViewBag.datediff = month / 30;
+
+
             return View();
 
         }

@@ -13,9 +13,9 @@
 <section class="w3l-breadcrumb">
     <div class="container">
         <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> Property</li>
-            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> property single</li>
+            <li><a href="/Default/Index/">Ana Sayfa</a></li>
+            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> İlanlar</li>
+            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> İlan Detayları</li>
         </ul>
     </div>
 </section>
@@ -27,8 +27,8 @@
                 <li>
                     <div class="listing-category"><span>@ViewBag.type</span></div>
                 </li>
-                <li><span class="fa fa-clock-o"></span> 5 months ago</li>
-                <li><span class="fa fa-eye"></span> 250 views</li>
+                <li><span class="fa fa-clock-o"></span> Yaklaşık @ViewBag.datediff Ay Önce İlana Eklendi.</li>
+                <li><span class="fa fa-eye"></span> 250 Kişi bu ilanı görüntüledi.</li>
             </ul>
         </div>
         <div class="post-content">
@@ -39,9 +39,9 @@
                 <li>
                     <p>@ViewBag.address @ViewBag.district / @ViewBag.city</p>
                 </li>
-                <li><span class="fa fa-bed"></span> 3 Beds</li>
+                <li><span class="fa fa-bed"></span> @ViewBag.bedCount Yatak Odası</li>
                 <li><span class="fa fa-bath"></span> @ViewBag.bathCount Banyo</li>
-                <li><span class="fa fa-share-square-o"></span> 1258 sqrft</li>
+                <li><span class="fa fa-share-square-o"></span> @ViewBag.size metrekare</li>
             </ul>
             <ul class="share-post">
                 <a href="#url" class="cost-estate m-o">₺ @ViewBag.price</a>
