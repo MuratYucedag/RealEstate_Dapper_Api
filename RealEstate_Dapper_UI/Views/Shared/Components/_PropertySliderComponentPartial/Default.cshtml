@@ -1,0 +1,14 @@
+﻿@model List<RealEstate_Dapper_UI.Dtos.PropertyImageDto.PropertyImageDtos>
+
+<div class="single-post-image mb-5">
+    <div class="owl-blog owl-carousel owl-theme">
+        @foreach(var item in Model)
+        {
+            <div class="item">
+                <div class="card">
+                    <img src="@item.ImageUrl" style="height:500px;" class="img-fluid radius-image" alt="image">
+                </div>
+            </div>
+        }
+    </div>
+</div>

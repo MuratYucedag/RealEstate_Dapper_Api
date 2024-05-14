@@ -50,25 +50,10 @@
         <div class="row">
             <div class="col-lg-8 w3l-news">
                 <div class="blog-single-post">
-                    <div class="single-post-image mb-5">
-                        <div class="owl-blog owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p1.jpg" class="img-fluid radius-image" alt="image">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p2.jpg" class="img-fluid radius-image" alt="image">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p3.jpg" class="img-fluid radius-image" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
+
+                    @await Component.InvokeAsync("_PropertySliderComponentPartial")
+                    
 
                     <div class="single-post-content">
                         <h3 class="post-content-title mb-3">Description</h3>
@@ -133,77 +118,8 @@
                     </div>
                 </div>
             </div>
-            <div class="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
-                <aside class="sidebar">
-
-                    <!-- Popular Post Widget-->
-                    <div class="sidebar-widget popular-posts">
-                        <div class="sidebar-title">
-                            <h4>Contact an Agent</h4>
-                        </div>
-
-                        <article class="post">
-                            <figure class="post-thumb">
-                                <img src="~/starter/assets/images/l5.jpg" class="radius-image" alt="">
-                            </figure>
-                            <div class="text mb-0">
-                                <a href="#blog-single">
-                                    Company realty
-                                </a>
-                                <div class="post-info">+(12) 324 567 89</div>
-                                <div class="post-info">companyrealty@mail.com</div>
-                            </div>
-                        </article>
-                        <button type="submit" class="btn btn-primary btn-style w-100">Request details</button>
-                    </div>
-
-
-                    <!-- Popular Post Widget-->
-                    <div class="sidebar-widget popular-posts">
-                        <div class="sidebar-title">
-                            <h4>Popular Post</h4>
-                        </div>
-
-                        <article class="post">
-                            <figure class="post-thumb">
-                                <img src="~/starter/assets/images/l1.jpg" class="radius-image" alt="">
-                            </figure>
-                            <div class="text">
-                                <a href="#blog-single">
-                                    Why we are the best in the business
-                                </a>
-                                <div class="post-info">Sep 09, 2020 - 2 comments</div>
-                            </div>
-                        </article>
-
-                        <article class="post">
-                            <figure class="post-thumb">
-                                <img src="~/starter/assets/images/l2.jpg" class="radius-image" alt="">
-                            </figure>
-                            <div class="text">
-                                <a href="#blog-single">
-                                    Build your next landing page.
-                                </a>
-                                <div class="post-info">Sep 09, 2020 - 2 comments</div>
-                            </div>
-                        </article>
-
-                        <article class="post">
-                            <figure class="post-thumb">
-                                <img src="~/starter/assets/images/l3.jpg" class="radius-image" alt="">
-                            </figure>
-                            <div class="text">
-                                <a href="#blog-single">
-                                    Simply the best. Better than the rest.
-                                </a>
-                                <div class="post-info">Sep 10, 2020 - 2 comments</div>
-                            </div>
-                        </article>
-
-                    </div>
-
-                </aside>
-            </div>
+            @await Component.InvokeAsync("_PropertyAppUserComponentPartial")
+            
         </div>
     </div>
 </section>
