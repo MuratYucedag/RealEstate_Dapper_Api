@@ -1,0 +1,11 @@
+﻿@model List<RealEstate_Dapper_UI.Dtos.PropertyAmentiyDtos.ResultPropertyAmenityByStatusTrueDto>
+
+<div class="single-bg-white">
+    <h3 class="post-content-title mb-4">Evin Diğer Özellikleri</h3>
+    <ul class="details-list">
+        @foreach(var item in Model)
+        {
+            <li><strong>@item.Title </strong></li>
+        }
+    </ul>
+</div>
