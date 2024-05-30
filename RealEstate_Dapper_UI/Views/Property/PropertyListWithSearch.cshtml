@@ -1,0 +1,34 @@
+﻿@model List<RealEstate_Dapper_UI.Dtos.ProductDtos.ResultProductWithSearchListDto>
+
+@{
+    ViewData["Title"] = "PropertyListWithSearch";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<section class="locations-1" id="locations">
+    <div class="locations py-5">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="heading text-center mx-auto">
+                <h3 class="title-big">Tüm Satılık & Kiralık İlanlar (@Model.Count)</h3>
+            </div>
+            <div class="row pt-md-5 pt-4">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="property-single.html">
+                            <div class="box16">
+                                <div class="rentext-listing-category"><span>@item.Type</span><span>@item.CategoryName</span></div>
+                                <img class="img-fluid" style="height:200px;width:700px" src="@item.Coverimage" alt="">
+                                <div class="box-content">
+                                    <h3 class="title">₺ @item.Price</h3>
+                                    <span class="post">@item.Address @item.District - @item.City</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+</section>
