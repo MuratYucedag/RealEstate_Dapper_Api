@@ -48,8 +48,8 @@ namespace RealEstate_Dapper_UI.Controllers
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> PropertySingle(int id)
+        [HttpGet("property/{slug}/{id}")]
+        public async Task<IActionResult> PropertySingle(string slug, int id)
         {
             ViewBag.i = id;
             var client = _httpClientFactory.CreateClient();   
@@ -89,6 +89,10 @@ namespace RealEstate_Dapper_UI.Controllers
             int month = timeSpan.Days;
 
             ViewBag.datediff = month / 30;
+
+            string slugFromTitle = CreateSlug(values.title);
+            ViewBag.slugUrl = slugFromTitle;
+
             return View();
         }
 
