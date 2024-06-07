@@ -11,8 +11,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         {
             _context = context;
         }
-
-        public async void CreateCategory(CreateCategoryDto categoryDto)
+        public async Task CreateCategory(CreateCategoryDto categoryDto)
         {
             string query = "insert into Category (CategoryName,CategoryStatus) values (@categoryName,@categoryStatus)";
             var parameters = new DynamicParameters();
@@ -23,8 +22,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 await connection.ExecuteAsync(query, parameters);
             }
         }
-
-        public async void DeleteCategory(int id)
+        public async Task DeleteCategory(int id)
         {
             string query = "Delete From Category Where CategoryID=@categoryID";
             var parameters = new DynamicParameters();
@@ -35,7 +33,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
             }
         }
 
-        public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()
+        public async Task<List<ResultCategoryDto>> GetAllCategory()
         {
             string query = "Select * From Category";
             using (var connection = _context.CreateConnection())
@@ -44,7 +42,6 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 return values.ToList();
             }
         }
-
         public async Task<GetByIDCategoryDto> GetCategory(int id)
         {
             string query = "Select * From Category Where CategoryID=@CategoryID";
@@ -56,8 +53,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 return values;
             }
         }
-
-        public async void UpdateCategory(UpdateCategoryDto categoryDto)
+        public async Task UpdateCategory(UpdateCategoryDto categoryDto)
         {
             string query = "Update Category Set CategoryName=@categoryName,CategoryStatus=@categoryStatus where CategoryID=@categoryID";
             var parameters = new DynamicParameters();

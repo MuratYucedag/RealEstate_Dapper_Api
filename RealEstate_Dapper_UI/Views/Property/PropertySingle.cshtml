@@ -51,7 +51,7 @@
                 <div class="blog-single-post">
 
 
-                    @await Component.InvokeAsync("_PropertySliderComponentPartial")
+                    @await Component.InvokeAsync("_PropertySliderComponentPartial",new{id=ViewBag.i})
 
 
                     <div class="single-post-content">
@@ -79,7 +79,7 @@
                         </div>
 
                         @await Component.InvokeAsync("_PropertyAmenityStatusTrueByPropertyIdComponentPartial")
-                       
+
                     </div>
 
                     <div class="single-bg-white">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
 
-                   
+
 
                     <div class="single-bg-white mb-0">
                         <h3 class="post-content-title mb-4">Ev Tanıtım Videosu</h3>
